@@ -12,7 +12,6 @@ def main():
     command = ["llamafactory-cli", "train", config_file]
     
     try:
-        # 执行微调
         subprocess.run(command, check=True)
         print("[CARES] Model fine-tuning finished successfully.")
     except subprocess.CalledProcessError as e:
