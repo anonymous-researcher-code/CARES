@@ -14,7 +14,7 @@ include_num_input_tokens_seen: true
 learning_rate: 0.0002
 logging_steps: 1
 lora_alpha: 16
-lora_dropout: 0
+lora_dropout: 0.05
 lora_rank: 8
 lora_target: all
 lr_scheduler_type: cosine
