@@ -76,11 +76,7 @@ flowchart TD
         └── generate_args.yaml
 ```
 
-## Environment Setup
-
-The repository does not currently provide a pinned `requirements.txt`, so a clean Python environment is recommended.
-
-### Recommended
+## Environment Setup Recommended
 
 - Python `3.10+`
 - PyTorch with CUDA support for training/inference
@@ -242,28 +238,6 @@ The evaluation module supports:
 
 If your test file includes a `lang` field, `evaluation.py` can report results by programming language.
 
-## Important Configuration Notes
-
-Before running the scripts, please review and update hard-coded paths and placeholders in the repository.
-
-### Paths that usually need to be customized
-
-- `dataset_path`
-- `dataset_base_path`
-- `your_full_database.jsonl`
-- `your_full_database_path`
-- `your_output_path`
-- model checkpoint paths inside generation scripts
-
-### Files worth checking first
-
-- `retriever_finetuning/finetuning_pipeline.py`
-- `retriever_finetuning/get_rag_candidates.py`
-- `generation_finetuning_with_RAG/finetuning_LLM/alpaca_data_builder.py`
-- `generation_finetuning_with_RAG/finetuning_LLM/training_args.yaml`
-- `generation_finetuning_with_RAG/finetuning_LLM/generate_args.yaml`
-- `generation_finetuning_with_RAG/finetuning_CodeReviewer/generation.py`
-
 ### Practical advice
 
 - Unify your dataset field names before starting a full experiment
@@ -281,31 +255,4 @@ For a clean reproduction, the following order is recommended:
 4. Fine-tune a generator
 5. Run inference on the test split
 6. Evaluate retriever and generator outputs
-
-## Current Scope
-
-This repository currently focuses on **training and experimentation scripts**. It does not yet bundle:
-
-- a release-ready command-line interface,
-- a pinned dependency lockfile,
-- public dataset files,
-- packaged pretrained checkpoints.
-
-That makes the repository especially suitable for research replication, method iteration, and internal experimentation.
-
-## Citation
-
-If this repository is associated with a paper or thesis, you can add a citation block here later.
-
-```bibtex
-@misc{cares,
-  title={CARES},
-  author={Anonymous},
-  year={2026}
-}
-```
-
-## License
-
-Please add an explicit license file if you plan to open-source the repository publicly.
 
